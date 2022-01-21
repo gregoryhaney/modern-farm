@@ -115,9 +115,14 @@ import { plantSeeds } from './tractor.js'
     Then use console.log() to see your new array of harvested food to sell.
 
 */
+
 /*
-   // usePlants was imported earlier, this module/Ln 83
+    usePlants was imported earlier, this module/Ln 83
     const bVariable = usePlants()
     import { harvestPlants } from './harvester.js'
     const aVariable = harvestPlants(bVariable)
 */
+
+import { harvestPlants } from './harvester.js'
+const harvestedFoodArray = harvestPlants(thePlantsArray)
+console.log(harvestedFoodArray)
