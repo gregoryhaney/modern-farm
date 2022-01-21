@@ -9,7 +9,10 @@ const plantsGrowingInFieldArray = []
 // it will add the seed to the field (plantsGrowingInFieldArray)
 export const addPlant = (chapterTwoSeedObject) => {
     plantsGrowingInFieldArray.push(chapterTwoSeedObject)
+    console.log(plantsGrowingInFieldArray + ' this is the plantsGrowingInFieldArray')
+    
 }
+
 
 // Define and export a function named usePlants
 // that returns a copy of the array of plants.

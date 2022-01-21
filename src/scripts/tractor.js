@@ -23,28 +23,26 @@ import { usePlants } from './field.js'
 
 export const plantSeeds = (yearlyPlan) => {
     const seederInfo = []
-    
-    for (const plan of yearlyPlan) 
-        {
-        for ( const crop of plan) {
+        for (const plan of yearlyPlan) {
+            for ( const crop of plan) {
                     if (crop === "Wheat") {
                         const wheatSeed = createWheat()
-                        addPlant(wheatSeed.push)
+                        seederInfo.push(wheatSeed)
                      } else if (crop === "Potato") {
                         const potatoSeed = createPotato()
-                        addPlant(potatoSeed.push)
+                        seederInfo.push(potatoSeed)
                     } else if (crop === "Asparagus") {
                         const asparagusSeed = createAsparagus()
-                        addPlant(asparagusSeed.push)    
+                        seederInfo.push(asparagusSeed)   
                     } else if (crop === "Soybean") {
                         const soybeanSeed = createSoybean()
-                        addPlant(soybeanSeed.push)
+                        seederInfo.push(soybeanSeed)
                     } else if (crop === "Sunflower") {
                         const sunflowerSeed = createSunflower()
-                        addPlant(sunflowerSeed.push)
+                        seederInfo.push(sunflowerSeed)
                     } else {
                         const cornSeed = createCorn()
-                        addPlant(cornSeed.push)
+                        seederInfo.push(cornSeed)
                     }
              }
          }
