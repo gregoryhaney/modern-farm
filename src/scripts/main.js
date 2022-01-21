@@ -126,3 +126,17 @@ import { plantSeeds } from './tractor.js'
 import { harvestPlants } from './harvester.js'
 const harvestedFoodArray = harvestPlants(thePlantsArray)
 console.log(harvestedFoodArray)
+
+
+/*         CHAPTER 6
+invoke the Catalog function and make sure you pass 
+the array of food as an argument. 
+Make sure your web server is running and refresh the browser. 
+
+Please do not try to make it identical. 
+Just make sure you are displaying them in a grid layout.
+*/
+
+import { catalog } from './catalog.js'
+const catalogGridMaker = catalog(harvestedFoodArray)
+console.log("catalog: " + catalogGridMaker)
