@@ -48,7 +48,7 @@ console.log(usePlants())
 
 // harvest the crops 
 // Project Chapter 5 requirements
-const myHarvest = harvestPlants(usePlants()); 
+const myHarvest = harvestPlants(usePlants()) 
 console.log(myHarvest)
 
 // sell the harvested crops 

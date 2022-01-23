@@ -20,13 +20,13 @@ const plantedPlants = [];
 export const addPlant = (seedObject) => { 
     if (Array.isArray(seedObject) === true) { 
         for (let i = 0; i < seedObject.length; i++) { 
-            plantedPlants.push(seedObject[i]); 
+            plantedPlants.push(seedObject[i])
         } 
     } else { 
-        plantedPlants.push(seedObject); 
+        plantedPlants.push(seedObject) 
     } 
 } 
 
 export const usePlants = () => { 
-    return plantedPlants; 
+    return plantedPlants 
 }
