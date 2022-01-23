@@ -1,50 +1,45 @@
+/* 
+     -Define and export a plantSeeds fn.
+        -- fn must accept the year's planting plan as input 
+        -- the plan is an array and contains four arrays 
+        -- representing the rows in the field to be plants. 
+            --- Determine how to iterate the parent array and child arrays.
+            --- As you iterate the row of food types to be planted, 
+            --- invoke the corresponding factory fn 
+                ----(e.g.: if food type is "Asparagus", invoke 
+                ----the createAsparagus fn to get an asparagus seed).
+                ---- take that seed & add it to the array of plants in the field module.
+*/
 
+import { createAsparagus } from "./seeds/asparagus.js"
+import { createPotato } from "./seeds/potato.js" 
+import { createCorn } from "./seeds/corn.js" 
+import { createSoybean } from "./seeds/soybean.js"
+import { createSunflower } from "./seeds/sunflower.js"
+import { createWheat } from "./seeds/wheat.js"
 import { addPlant } from "./field.js"
-import { createCorn } from './seeds/corn.js'
-import { createSoybean } from './seeds/soybean.js'
-import { createAsparagus } from './seeds/asparagus.js'
-import { createSunflower } from './seeds/sunflower.js'
-import { createPotato } from './seeds/potato.js'
-import { createWheat } from './seeds/wheat.js'
-import { usePlants } from './field.js'
 
-
-// define and export a plantSeeds function.
-// The function must accept the year's planting plan as input
-
-// The plan is an array. It contains 4 arrays representing 
-// the rows in the field to be plants. 
-// Figure out how to iterate both the parent array and the child arrays.
-// As you iterate the row of food types to be planted, 
-// invoke the corresponding factory function 
-// (e.g. if the food type is "Asparagus", invoke 
-// the createAsparagus function to get an asparagus seed).
-// Take that seed and add it to the array of plants in the field module.
-
-export const plantSeeds = (yearlyPlan) => {
-    const seederInfo = []
-        for (const plan of yearlyPlan) {
-            for ( const crop of plan) {
-                    if (crop === "Wheat") {
-                        const wheatSeed = createWheat()
-                        seederInfo.push(wheatSeed)
-                     } else if (crop === "Potato") {
-                        const potatoSeed = createPotato()
-                        seederInfo.push(potatoSeed)
-                    } else if (crop === "Asparagus") {
-                        const asparagusSeed = createAsparagus()
-                        seederInfo.push(asparagusSeed)   
-                    } else if (crop === "Soybean") {
-                        const soybeanSeed = createSoybean()
-                        seederInfo.push(soybeanSeed)
-                    } else if (crop === "Sunflower") {
-                        const sunflowerSeed = createSunflower()
-                        seederInfo.push(sunflowerSeed)
-                    } else {
-                        const cornSeed = createCorn()
-                        seederInfo.push(cornSeed)
-                    }
-             }
-         }
-         return seederInfo
-     }  
+export const plantSeeds = (yearlyPlan) => { 
+    for (const season of yearlyPlan) { 
+        for (let i = 0; i < season.length; i++) { 
+            if (season[i] === "Asparagus") { 
+                addPlant(createAsparagus()) 
+            } 
+            if (season[i] === "Potato") { 
+                addPlant(createPotato()) 
+            } 
+            if (season[i] === "Corn") { 
+                addPlant(createCorn()) 
+            } 
+            if (season[i] === "Soybean") { 
+                addPlant(createSoybean()) 
+            } 
+            if (season[i] === "Sunflower") { 
+                addPlant(createSunflower()) 
+            } 
+            if (season[i] === "Wheat") { 
+                addPlant(createWheat()) 
+            } 
+        } 
+    } 
+}

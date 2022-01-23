@@ -1,5 +1,5 @@
 export const createCorn = () => {
-    const cornSeedArray = [
+    const seedType = [
         {
         type: "Corn",
         height: 180,
@@ -12,5 +12,5 @@ export const createCorn = () => {
         output: 6
     }
     ]
-    return cornSeedArray
+    return seedType
 }

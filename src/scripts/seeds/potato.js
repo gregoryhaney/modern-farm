@@ -1,8 +1,8 @@
 export const createPotato = () => {
-    const potatoSeedObject = {
+    const seedType = {
         type: "Potato",
         height: 32,
         output: 2
     }
-    return potatoSeedObject
+    return seedType
 }

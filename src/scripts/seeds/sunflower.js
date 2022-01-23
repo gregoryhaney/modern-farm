@@ -1,8 +1,8 @@
 export const createSunflower = () => {
-    const sunflowerSeedObject = {
+    const seedType = {
         type: "Sunflower",
         height: 380,
         output: 3
     }
-    return sunflowerSeedObject
+    return seedType
 }
