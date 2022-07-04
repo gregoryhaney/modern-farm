@@ -6,8 +6,8 @@
             --- Determine how to iterate the parent array and child arrays.
             --- As you iterate the row of food types to be planted, 
             --- invoke the corresponding factory fn 
-                ----(e.g.: if food type is "Asparagus", invoke 
-                ----the createAsparagus fn to get an asparagus seed).
+                ---- (e.g.: if food type is "Asparagus", invoke 
+                ---- the createAsparagus fn to get an asparagus seed).
                 ---- take that seed & add it to the array of plants in the field module.
 */
 

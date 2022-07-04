@@ -32,7 +32,7 @@ const wheatSeed = createWheat()
 console.log(wheatSeed) 
 
 
-// create plan the yearly planting plan
+// create plan: the yearly planting plan
 const yearlyPlan = createPlan()
 console.log(yearlyPlan)
 

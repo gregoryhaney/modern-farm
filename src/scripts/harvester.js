@@ -6,11 +6,12 @@
     -Iterate the array of growing plants.
         --On each plant, get the value of the output property.
         --Add that many of the plant objects to the array that the fn returns. 
-            ---E.g.: if current plant is peanut object with  output of 2,
+            ---E.g.: if current plant is peanut object with output of 2,
             ---the array that the fn returns should have two identical objects added to it.
 */
 
 export const harvestPlants = (plantsArray) => { 
+        // empty array to hold the seed object
     const seedObjectArray = []; 
         for (const plant of plantsArray) { 
              let plantOutput = plant.output 
